@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Biblioteca digital del Módulo 2.1 con documentos y presentaciones almacenados en Google Drive."
+    />
+    <meta name="theme-color" content="#5b4bdb" />
+    <title>Biblioteca Digital | Módulo 2.1</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%235b4bdb'/%3E%3Cpath d='M17 16h20a10 10 0 0 1 10 10v24H27a10 10 0 0 0-10 4V16Z' fill='white'/%3E%3Cpath d='M27 50V22h12a8 8 0 0 1 8 8' fill='none' stroke='%23d9d5ff' stroke-width='4'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-progress" aria-hidden="true"></div>
+
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32">
+            <path d="M7 6h10a6 6 0 0 1 6 6v13H13a6 6 0 0 0-6 2V6Z" />
+            <path d="M13 25V10h6a4 4 0 0 1 4 4" />
+          </svg>
+        </span>
+        <span>
+          <strong>Biblio<span>Dev</span></strong>
+          <small>Portafolio académico</small>
+        </span>
+      </a>
+
+      <nav class="side-nav" aria-label="Navegación principal">
+        <p class="nav-label">Explorar</p>
+        <a class="nav-link active" href="#inicio">
+          <span class="nav-icon" data-icon="home"></span>
+          Inicio
+        </a>
+        <a class="nav-link" href="#biblioteca">
+          <span class="nav-icon" data-icon="library"></span>
+          Biblioteca
+          <span class="nav-count">22</span>
+        </a>
+        <a class="nav-link" href="#acerca">
+          <span class="nav-icon" data-icon="user"></span>
+          Acerca del proyecto
+        </a>
+
+        <p class="nav-label">Colecciones</p>
+        <button class="nav-link filter-shortcut" type="button" data-filter-target="presentation">
+          <span class="nav-icon color-orange" data-icon="presentation"></span>
+          Presentaciones
+          <span class="nav-count">11</span>
+        </button>
+        <button class="nav-link filter-shortcut" type="button" data-filter-target="document">
+          <span class="nav-icon color-blue" data-icon="file"></span>
+          Documentos
+          <span class="nav-count">11</span>
+        </button>
+        <button class="nav-link filter-shortcut" type="button" data-filter-target="uml">
+          <span class="nav-icon color-purple" data-icon="diagram"></span>
+          Diagramas UML
+          <span class="nav-count">10</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-card">
+        <span class="sidebar-card-icon" data-icon="github"></span>
+        <div>
+          <strong>Mi perfil de GitHub</strong>
+          <p>Consulta mis proyectos y repositorios.</p>
+        </div>
+        <a class="github-profile-link" href="https://github.com/" target="_blank" rel="noreferrer">
+          Abrir perfil
+          <span data-icon="arrow-up-right"></span>
+        </a>
+      </div>
+
+      <p class="sidebar-footer">Módulo 2.1 · Segundo año</p>
+    </aside>
+
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="icon-button menu-button" id="menuButton" type="button" aria-label="Abrir menú">
+          <span data-icon="menu"></span>
+        </button>
+
+        <div class="breadcrumb">
+          <span>Portafolio</span>
+          <span data-icon="chevron-right"></span>
+          <strong>Módulo 2.1</strong>
+        </div>
+
+        <div class="topbar-actions">
+          <span class="status-pill"><i></i> Actualizado</span>
+          <button class="icon-button" id="themeToggle" type="button" aria-label="Cambiar tema">
+            <span data-icon="moon"></span>
+          </button>
+          <a
+            class="top-github github-profile-link"
+            href="https://github.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span data-icon="github"></span>
+            <span class="github-label">GitHub</span>
+          </a>
+        </div>
+      </header>
+
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <span class="eyebrow"><i></i> Biblioteca digital académica</span>
+          <h1>Todo el módulo,<br /><em>en un solo lugar.</em></h1>
+          <p>
+            Una colección organizada de documentos, presentaciones y diagramas UML
+            desarrollados durante el Módulo 2.1.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#biblioteca">
+              Explorar biblioteca
+              <span data-icon="arrow-down"></span>
+            </a>
+            <a
+              class="button button-secondary github-profile-link"
+              href="https://github.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span data-icon="github"></span>
+              Ver mi GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-glow"></div>
+          <div class="floating-note note-one">
+            <span data-icon="sparkles"></span>
+            <p><strong>22 recursos</strong><small>listos para consultar</small></p>
+          </div>
+          <div class="book book-back">
+            <span>MÓDULO</span>
+            <strong>2.1</strong>
+          </div>
+          <div class="book book-middle">
+            <span>MODELADO</span>
+            <strong>UML</strong>
+          </div>
+          <div class="book book-front">
+            <div class="book-symbol" data-icon="code"></div>
+            <p>PORTAFOLIO</p>
+            <strong>ACADÉMICO</strong>
+            <small>Segundo año · 2026</small>
+          </div>
+          <div class="floating-note note-two">
+            <span data-icon="cloud"></span>
+            <p><strong>Google Drive</strong><small>acceso en línea</small></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Resumen del contenido">
+        <article>
+          <span class="stat-icon purple" data-icon="files"></span>
+          <div><strong id="totalStat">22</strong><span>Recursos</span></div>
+          <small>Catálogo completo</small>
+        </article>
+        <article>
+          <span class="stat-icon orange" data-icon="presentation"></span>
+          <div><strong id="presentationStat">11</strong><span>Presentaciones</span></div>
+          <small>Formato PPTX</small>
+        </article>
+        <article>
+          <span class="stat-icon blue" data-icon="file"></span>
+          <div><strong id="documentStat">11</strong><span>Documentos</span></div>
+          <small>Formato DOCX</small>
+        </article>
+        <article>
+          <span class="stat-icon green" data-icon="diagram"></span>
+          <div><strong id="umlStat">10</strong><span>Recursos UML</span></div>
+          <small>Diagramas y modelado</small>
+        </article>
+      </section>
+
+      <section class="library-section" id="biblioteca">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">Colección del módulo</span>
+            <h2>Biblioteca de recursos</h2>
+            <p>Busca por tema, filtra por formato y abre cada archivo directamente en Drive.</p>
+          </div>
+          <div class="view-switch" aria-label="Cambiar vista">
+            <button class="active" id="gridViewButton" type="button" aria-label="Vista de cuadrícula">
+              <span data-icon="grid"></span>
+            </button>
+            <button id="listViewButton" type="button" aria-label="Vista de lista">
+              <span data-icon="list"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="library-toolbar">
+          <label class="search-box" for="searchInput">
+            <span data-icon="search"></span>
+            <input id="searchInput" type="search" placeholder="Buscar un tema o documento..." />
+            <kbd>Ctrl K</kbd>
+          </label>
+
+          <div class="filters" id="filters" aria-label="Filtrar recursos">
+            <button class="filter-button active" type="button" data-filter="all">
+              Todos <span>22</span>
+            </button>
+            <button class="filter-button" type="button" data-filter="presentation">
+              Presentaciones <span>11</span>
+            </button>
+            <button class="filter-button" type="button" data-filter="document">
+              Documentos <span>11</span>
+            </button>
+            <button class="filter-button" type="button" data-filter="uml">
+              UML <span>10</span>
+            </button>
+          </div>
+
+          <label class="sort-control">
+            <span data-icon="sort"></span>
+            <select id="sortSelect" aria-label="Ordenar recursos">
+              <option value="module">Orden del módulo</option>
+              <option value="az">Nombre A–Z</option>
+              <option value="za">Nombre Z–A</option>
+              <option value="type">Por formato</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="results-bar">
+          <p><strong id="resultCount">22</strong> recursos encontrados</p>
+          <span>Los archivos se abrirán en Google Drive</span>
+        </div>
+
+        <div class="resource-grid" id="resourceGrid" aria-live="polite"></div>
+
+        <div class="empty-state" id="emptyState" hidden>
+          <span data-icon="search-x"></span>
+          <h3>No encontramos ese recurso</h3>
+          <p>Prueba con otro término o selecciona un filtro diferente.</p>
+          <button class="button button-primary" id="clearSearchButton" type="button">
+            Limpiar búsqueda
+          </button>
+        </div>
+      </section>
+
+      <section class="about-section" id="acerca">
+        <div class="about-copy">
+          <span class="section-kicker light">Sobre este portafolio</span>
+          <h2>Aprender también es documentar el proceso.</h2>
+          <p>
+            Este sitio reúne las evidencias desarrolladas durante el módulo:
+            investigaciones, presentaciones y ejercicios de modelado de sistemas.
+          </p>
+        </div>
+        <div class="about-points">
+          <article>
+            <span data-icon="check"></span>
+            <div><strong>Contenido organizado</strong><p>Recursos clasificados por tema y formato.</p></div>
+          </article>
+          <article>
+            <span data-icon="cloud"></span>
+            <div><strong>Siempre disponible</strong><p>Acceso directo a los archivos almacenados en Drive.</p></div>
+          </article>
+          <article>
+            <span data-icon="github"></span>
+            <div><strong>Publicado con GitHub</strong><p>Un portafolio web fácil de compartir y actualizar.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <footer>
+        <a class="brand footer-brand" href="#inicio">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32">
+              <path d="M7 6h10a6 6 0 0 1 6 6v13H13a6 6 0 0 0-6 2V6Z" />
+              <path d="M13 25V10h6a4 4 0 0 1 4 4" />
+            </svg>
+          </span>
+          <strong>Biblio<span>Dev</span></strong>
+        </a>
+        <p>Portafolio académico · Módulo 2.1 · <span id="currentYear"></span></p>
+        <a class="github-profile-link" href="https://github.com/" target="_blank" rel="noreferrer">
+          GitHub <span data-icon="arrow-up-right"></span>
+        </a>
+      </footer>
+    </main>
+  </body>
+</html>
